@@ -42,38 +42,14 @@ public class TurretMovement : MonoBehaviour
         localY = Input.GetAxis("Mouse Y");
         // Logic for computing how the barrel moves
         
-        // Vector3(0,0,0)
-        // Quaternion(0,0,0,1)
-        
-        float NewClamp(float value, float min, float max)
-        {
-            if ((double) value < (double) min)
-                value = min;
-            else if ((double) value > (double) max)
-                value = max;
-            return value;
-        }
             
         if (Math.Abs(localX - currentX) > 0.25 || Math.Abs(localY - currentY) > 0.25)
         {
             transform.Rotate(-localY, 0, localX, Space.Self);
-            // Debug.Log($"LocalX is {Math.Abs(localX)}");
-            // Debug.Log($"LocalY is {Math.Abs(localY)}");
-            // Debug.Log($"DifferenceX is {Math.Abs(localX - currentX)}");
             
             Vector3 currentRotation = transform.localRotation.eulerAngles;
-            // currentRotation.x = Mathf.Clamp(currentRotation.x, minRotationX, maxRotationX);
-            // Debug.Log($"currentRotation.x is {currentRotation.x}");
-            // Wrap(currentRotation.z, 180, -180);
-            // currentRotation.z = Mathf.Clamp(currentRotation.z, minRotationZ, maxRotationZ);
-            // Debug.Log($"currentRotation.z is {currentRotation.z}");
-            // transform.localRotation = Quaternion.Euler(currentRotation);
-            // transform.localRotation = Quaternion.Euler(currentRotation);
+           
         }
-        
-        // Debug.Log(localY);
-        // Debug.Log(localX);
-        
        
     }
 }

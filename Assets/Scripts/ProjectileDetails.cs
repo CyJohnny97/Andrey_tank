@@ -10,6 +10,7 @@ public class ProjectileDetails : MonoBehaviour
     private CinemachineVirtualCamera cvm1, cvm2;
     float startTime = 0f;
     
+    // Logic for when game projectile collides with tank
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Enemy"))
