@@ -218,6 +218,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &161979343 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1429425420, guid: 26b1a3466d0b8f341bcc73e6ab2937eb, type: 3}
+  m_PrefabInstance: {fileID: 272947605}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &272947605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -259,15 +264,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4249338741251280, guid: 26b1a3466d0b8f341bcc73e6ab2937eb, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -1
+      value: -0.9999923
       objectReference: {fileID: 0}
     - target: {fileID: 4249338741251280, guid: 26b1a3466d0b8f341bcc73e6ab2937eb, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.0039366204
       objectReference: {fileID: 0}
     - target: {fileID: 4249338741251280, guid: 26b1a3466d0b8f341bcc73e6ab2937eb, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4249338741251280, guid: 26b1a3466d0b8f341bcc73e6ab2937eb, type: 3}
       propertyPath: m_LocalRotation.z
@@ -275,7 +280,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4249338741251280, guid: 26b1a3466d0b8f341bcc73e6ab2937eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 0.451
       objectReference: {fileID: 0}
     - target: {fileID: 4249338741251280, guid: 26b1a3466d0b8f341bcc73e6ab2937eb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -318,7 +323,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503411642}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: -0.7071067}
-  m_LocalPosition: {x: -0.00014474482, y: 0.0874, z: 0.0274}
+  m_LocalPosition: {x: 0.00049, y: 0.0874, z: 0.0274}
   m_LocalScale: {x: 0.001972282, y: 0.002188617, z: 0.0020407392}
   m_Children: []
   m_Father: {fileID: 537156602}
@@ -775,10 +780,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b47694e61dd08243a3dfe831339a8da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cammeraTarget: {fileID: 503411643}
-  cammeraLookAt: {fileID: 1429425420}
-  projectile: {fileID: 4124692674721680461, guid: 6463a9dd3e22d0b42aaca42422536d85, type: 3}
-  smooth: 5
+  cammeraTarget: {fileID: 161979343}
+  lookPosition: {fileID: 503411643}
+  distanceTime: 1
+  desiredPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &996003403
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,11 +1092,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1429425420 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1429425420, guid: 26b1a3466d0b8f341bcc73e6ab2937eb, type: 3}
-  m_PrefabInstance: {fileID: 272947605}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1511646045
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,10 +7,7 @@ using UnityEngine.Serialization;
 public class CameraFollow : MonoBehaviour
 {
     [FormerlySerializedAs("target")] public Transform cammeraTarget;
-    public Transform cammeraLookAt;
-    public Transform projectile;
-    public float smooth = 5f;
-
+    public Transform lookPosition;
 
     void Start()
     {
@@ -21,32 +18,20 @@ public class CameraFollow : MonoBehaviour
     {
     }
 
+    public float distanceTime = 1;
+    public Vector3 desiredPosition;
 
-    void  LateUpdate ()
+    void LateUpdate()
     {
-        
-        if (GameObject.FindWithTag("Projectile") != null && !ReferenceEquals(gameObject, null))
-        {
-            Vector3 desiredPosition = projectile.position;
-        
-            Vector3 smoothedPosition = Vector3.Lerp(
-                transform.position, desiredPosition, smooth * Time.deltaTime);
-        
-            transform.position = smoothedPosition;
-        
-            transform.LookAt(projectile);
-        }
-        else
-        {
-            Vector3 desiredPosition = cammeraTarget.position;
-        
-            Vector3 smoothedPosition = Vector3.Lerp(
-                transform.position, desiredPosition, smooth * Time.deltaTime);
-        
-            transform.position = smoothedPosition;
-        
-            transform.LookAt(cammeraLookAt);
-        }
-        
+
+        desiredPosition = lookPosition.position;
+
+        Vector3 smoothedPosition = Vector3.Lerp(
+            transform.position, desiredPosition, Mathf.Clamp(0, 1, distanceTime / Time.deltaTime));
+
+        transform.position = smoothedPosition;
+
+        transform.LookAt(cammeraTarget);
+
     }
 }
